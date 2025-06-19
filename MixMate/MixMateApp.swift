@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct MixMateApp: App {
+
+    
     var body: some Scene {
         WindowGroup {
             MainMenu()
+
         }
     }
 }

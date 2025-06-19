@@ -22,18 +22,18 @@ class DataHandler: ObservableObject {
     static func shapeFigs(A: Double, B: Double, C: Double, D: Double, E: Double, F: String, G: String, I: Double, J: Double, K: String) ->
     (Area: Double,
      Volume: Double,
-     BagsCement20kg: Double,
-     BagsCement25kg: Double,
-     BagsCement30kg: Double,
-     BagsSand20kg: Double,
-     BagsSand25kg: Double,
-     BagsSand30kg: Double,
-     BagsAggregate20kg: Double,
-     BagsAggregate25kg: Double,
-     BagsAggregate30kg: Double
+     BagsCementSmall: Double,
+     BagsCementMed: Double,
+     BagsCementLarge: Double,
+     BagsSandSmall: Double,
+     BagsSandMed: Double,
+     BagsSandLarge: Double,
+     BagsAggregateSmall: Double,
+     BagsAggregateMed: Double,
+     BagsAggregateLarge: Double
     )
     {
-        var Area = 0.0; var Volume = 0.0; var BagsCement20kg = 0.0; var BagsCement25kg = 0.0; var BagsCement30kg = 0.0; var BagsSand20kg = 0.0; var BagsSand25kg = 0.0; var BagsSand30kg = 0.0; var BagsAggregate20kg = 0.0; var BagsAggregate25kg = 0.0; var BagsAggregate30kg = 0.0
+        var Area = 0.0; var Volume = 0.0; var BagsCementSmall = 0.0; var BagsCementMed = 0.0; var BagsCementLarge = 0.0; var BagsSandSmall = 0.0; var BagsSandMed = 0.0; var BagsSandLarge = 0.0; var BagsAggregateSmall = 0.0; var BagsAggregateMed = 0.0; var BagsAggregateLarge = 0.0
         
         
         if G == "C" {  // Concrete Slab
@@ -82,26 +82,26 @@ class DataHandler: ObservableObject {
            }
         let totmix: Double = Double(Cem + Sand + Agg)
         
-        BagsCement20kg = roundUp(value: Double(res * Cem/(totmix) * 2225 / 20), toNearest: 0.5)
-        BagsCement25kg = roundUp(value: Double(res * Cem/(totmix) * 2225 / 25), toNearest: 0.5)
-        BagsCement30kg = roundUp(value: Double(res * Cem/(totmix) * 2225 / 30), toNearest: 0.5)
-        BagsSand20kg = roundUp(value: Double(res * Sand/(totmix) * 2225 / 20), toNearest: 0.5)
-        BagsSand25kg = roundUp(value: Double(res * Sand/(totmix) * 2225 / 25), toNearest: 0.5)
-        BagsSand30kg = roundUp(value: Double(res * Sand/(totmix) * 2225 / 30), toNearest: 0.5)
-        BagsAggregate20kg = roundUp(value: Double(res * Agg/(totmix) * 2225 / 20) , toNearest: 0.5)
-        BagsAggregate25kg = roundUp(value: Double(res * Agg/(totmix) * 2225 / 25), toNearest: 0.5)
-        BagsAggregate30kg = roundUp(value: Double(res * Agg/(totmix) * 2225 / 30), toNearest: 0.5)
+        BagsCementSmall = roundUp(value: Double(res * Cem/(totmix) * 2225 / 20), toNearest: 0.5)
+        BagsCementMed = roundUp(value: Double(res * Cem/(totmix) * 2225 / 25), toNearest: 0.5)
+        BagsCementLarge = roundUp(value: Double(res * Cem/(totmix) * 2225 / 30), toNearest: 0.5)
+        BagsSandSmall = roundUp(value: Double(res * Sand/(totmix) * 2225 / 20), toNearest: 0.5)
+        BagsSandMed = roundUp(value: Double(res * Sand/(totmix) * 2225 / 25), toNearest: 0.5)
+        BagsSandLarge = roundUp(value: Double(res * Sand/(totmix) * 2225 / 30), toNearest: 0.5)
+        BagsAggregateSmall = roundUp(value: Double(res * Agg/(totmix) * 2225 / 20) , toNearest: 0.5)
+        BagsAggregateMed = roundUp(value: Double(res * Agg/(totmix) * 2225 / 25), toNearest: 0.5)
+        BagsAggregateLarge = roundUp(value: Double(res * Agg/(totmix) * 2225 / 30), toNearest: 0.5)
         
         return (Area, Volume,
-                BagsCement20kg,
-                BagsCement25kg,
-                BagsCement30kg,
-                BagsSand20kg,
-                BagsSand25kg,
-                BagsSand30kg,
-                BagsAggregate20kg,
-                BagsAggregate25kg,
-                BagsAggregate30kg)
+                BagsCementSmall,
+                BagsCementMed,
+                BagsCementLarge,
+                BagsSandSmall,
+                BagsSandMed,
+                BagsSandLarge,
+                BagsAggregateSmall,
+                BagsAggregateMed,
+                BagsAggregateLarge)
     }
     
     static func roundUp(value: Double, toNearest: Double) -> Double {

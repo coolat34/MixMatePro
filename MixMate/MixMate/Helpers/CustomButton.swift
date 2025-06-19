@@ -10,27 +10,34 @@ import SwiftUI
 struct CustomButton: View {
     let label: String
     let width: Int
-    let isDisabled: Bool
+    let height: Int
+    let altColour: Bool
+    let logo: Image?
 
-    init(label: String, width: Int = 300, isDisabled: Bool = false) {
+    init(label: String, width: Int = 300, height: Int = 36, altColour: Bool = false, logo: Image? = nil) {
       self.label = label
       self.width = width
-      self.isDisabled = isDisabled
+      self.height = height
+      self.altColour = altColour
+        self.logo = logo
     }
 
     var body: some View {
-      Text("\(label)").fontWeight(.bold)
-        .foregroundColor(Color.white)
-        .frame(width: CGFloat(width), height: 48, alignment: .center)
-        .background(isDisabled ? Color.yellow : Color.teal)
+    
+        Text("\(label) \(logo ?? Image(systemName: "dot.square"))")
+            .fontWeight(.regular)
+        .foregroundColor(Color.black)
+        .frame(width: CGFloat(width), height: CGFloat(height), alignment: .center)
+        .background(altColour ? Color.mint: Color.teal)
         .cornerRadius(16, antialiased: true)
-        .padding()
-        .animation(.easeInOut, value: isDisabled)
+      //  .padding()
+        .animation(.easeInOut, value: altColour)
     }
   }
 
   struct CustomButton_Previews: PreviewProvider {
     static var previews: some View {
-      CustomButton(label: "This is the label", isDisabled: true)
+      CustomButton(label: "This is the label", altColour: true)
     }
   }
+

@@ -8,15 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		4C1144FE2DC22DED00CCE508 /* MixMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1144FD2DC22DED00CCE508 /* MixMateApp.swift */; };
+		4C93D2E12DEC71BA00780E33 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93D2DA2DEC71BA00780E33 /* MainMenu.swift */; };
+		4C93D3192DF085B300780E33 /* GenPDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93D3182DF085B300780E33 /* GenPDF.swift */; };
+		4C93D31B2DF1B3FA00780E33 /* DiagramContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93D31A2DF1B3FA00780E33 /* DiagramContent.swift */; };
+		4C93D31D2DF3016200780E33 /* Diagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93D31C2DF3016200780E33 /* Diagram.swift */; };
+		4C93D3B12DF9D72100780E33 /* ShapePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93D3B02DF9D72100780E33 /* ShapePicker.swift */; };
+		4C93D3B32DF9D80C00780E33 /* ShapeGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93D3B22DF9D80C00780E33 /* ShapeGallery.swift */; };
+		4C93D3B52DF9D8D700780E33 /* ShapeInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93D3B42DF9D8D700780E33 /* ShapeInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4C1144FA2DC22DED00CCE508 /* MixMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MixMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1144FD2DC22DED00CCE508 /* MixMateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixMateApp.swift; sourceTree = "<group>"; };
+		4C93D2DA2DEC71BA00780E33 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		4C93D3182DF085B300780E33 /* GenPDF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenPDF.swift; sourceTree = "<group>"; };
+		4C93D31A2DF1B3FA00780E33 /* DiagramContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramContent.swift; sourceTree = "<group>"; };
+		4C93D31C2DF3016200780E33 /* Diagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diagram.swift; sourceTree = "<group>"; };
+		4C93D3B02DF9D72100780E33 /* ShapePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapePicker.swift; sourceTree = "<group>"; };
+		4C93D3B22DF9D80C00780E33 /* ShapeGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeGallery.swift; sourceTree = "<group>"; };
+		4C93D3B42DF9D8D700780E33 /* ShapeInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		4C05EA5F2DC25D79004E7A48 /* Exceptions for "MixMate" folder in "MixMate" target */ = {
+		4C93D3A42DF8754300780E33 /* Exceptions for "MixMate" folder in "MixMate" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -29,9 +43,14 @@
 		4C1144FC2DC22DED00CCE508 /* MixMate */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				4C05EA5F2DC25D79004E7A48 /* Exceptions for "MixMate" folder in "MixMate" target */,
+				4C93D3A42DF8754300780E33 /* Exceptions for "MixMate" folder in "MixMate" target */,
 			);
 			path = MixMate;
+			sourceTree = "<group>";
+		};
+		4C93D3B62DF9E21A00780E33 /* BackupViews */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BackupViews;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -50,7 +69,15 @@
 		4C1144F12DC22DED00CCE508 = {
 			isa = PBXGroup;
 			children = (
+				4C93D3B62DF9E21A00780E33 /* BackupViews */,
 				4C1144FD2DC22DED00CCE508 /* MixMateApp.swift */,
+				4C93D2DA2DEC71BA00780E33 /* MainMenu.swift */,
+				4C93D3B02DF9D72100780E33 /* ShapePicker.swift */,
+				4C93D3B22DF9D80C00780E33 /* ShapeGallery.swift */,
+				4C93D3B42DF9D8D700780E33 /* ShapeInput.swift */,
+				4C93D31C2DF3016200780E33 /* Diagram.swift */,
+				4C93D31A2DF1B3FA00780E33 /* DiagramContent.swift */,
+				4C93D3182DF085B300780E33 /* GenPDF.swift */,
 				4C1144FC2DC22DED00CCE508 /* MixMate */,
 				4C1144FB2DC22DED00CCE508 /* Products */,
 			);
@@ -81,6 +108,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				4C1144FC2DC22DED00CCE508 /* MixMate */,
+				4C93D3B62DF9E21A00780E33 /* BackupViews */,
 			);
 			name = MixMate;
 			packageProductDependencies = (
@@ -97,7 +125,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1630;
-				LastUpgradeCheck = 1630;
+				LastUpgradeCheck = 1640;
 				TargetAttributes = {
 					4C1144F92DC22DED00CCE508 = {
 						CreatedOnToolsVersion = 16.3;
@@ -138,7 +166,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C93D3B12DF9D72100780E33 /* ShapePicker.swift in Sources */,
+				4C93D3B32DF9D80C00780E33 /* ShapeGallery.swift in Sources */,
 				4C1144FE2DC22DED00CCE508 /* MixMateApp.swift in Sources */,
+				4C93D3192DF085B300780E33 /* GenPDF.swift in Sources */,
+				4C93D2E12DEC71BA00780E33 /* MainMenu.swift in Sources */,
+				4C93D31D2DF3016200780E33 /* Diagram.swift in Sources */,
+				4C93D3B52DF9D8D700780E33 /* ShapeInput.swift in Sources */,
+				4C93D31B2DF1B3FA00780E33 /* DiagramContent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,14 +307,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.4;
 				DEVELOPMENT_TEAM = MQG8BZM2F6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MixMate/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MixMate;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -290,7 +325,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.christopher.david.milne.MixMatePro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -305,14 +340,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.5;
 				DEVELOPMENT_TEAM = MQG8BZM2F6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MixMate/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MixMate;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -323,7 +358,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.christopher.david.milne.MixMatePro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
