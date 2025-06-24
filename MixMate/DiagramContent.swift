@@ -11,20 +11,20 @@ import PDFKit
 struct DiagramContent: View {
     @ObservedObject var IM: InputModel
     @Environment(\.dismiss) var dismiss
-var shapeSmall: String
+var pickShape: String
     var body: some View {
         
         VStack {
-            Text(shapeSmall)
+            Text(pickShape)
                 .font(.largeTitle)
             
-            Image(shapeSmall)
+            Image(pickShape)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 250, height: 150)
                 .padding()
             
-            Text("Rounded to the nearest 1/2 Bag")
+            Text("Rounded to the nearest 1/2 Bag").font(.title2)
             
         } // VStack
         
@@ -48,8 +48,8 @@ var shapeSmall: String
         OutputBagField(label: IM.weightSmall, valCem: IM.BagsCementSmall, valSand: IM.BagsSandSmall, valAgg: IM.BagsAggregateSmall)
         OutputBagField(label: IM.weightMed, valCem: IM.BagsCementMed, valSand: IM.BagsSandMed, valAgg: IM.BagsAggregateMed)
         OutputBagField(label: IM.weightLarge, valCem: IM.BagsCementLarge, valSand: IM.BagsSandLarge, valAgg: IM.BagsAggregateLarge)
-                   
-        .padding()
+        Text("Mix Strength").font(.title2)
+      //  .padding()
         .navigationBarBackButtonHidden(true)
         .navigationTitle("Bag Configuration")
         .navigationBarTitleDisplayMode(.inline)
@@ -85,5 +85,5 @@ struct OutputBagField: View {
 } // Struct
 
 #Preview {
-    DiagramContent(IM: InputModel(), shapeSmall: "")
+    DiagramContent(IM: InputModel(), pickShape: "")
 }

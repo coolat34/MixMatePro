@@ -8,25 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		4C1144FE2DC22DED00CCE508 /* MixMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1144FD2DC22DED00CCE508 /* MixMateApp.swift */; };
+		4C8E1B802E05773700D3EDA4 /* KeyPadInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E1B7F2E05773700D3EDA4 /* KeyPadInput.swift */; };
 		4C93D2E12DEC71BA00780E33 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93D2DA2DEC71BA00780E33 /* MainMenu.swift */; };
 		4C93D3192DF085B300780E33 /* GenPDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93D3182DF085B300780E33 /* GenPDF.swift */; };
 		4C93D31B2DF1B3FA00780E33 /* DiagramContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93D31A2DF1B3FA00780E33 /* DiagramContent.swift */; };
 		4C93D31D2DF3016200780E33 /* Diagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93D31C2DF3016200780E33 /* Diagram.swift */; };
-		4C93D3B12DF9D72100780E33 /* ShapePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93D3B02DF9D72100780E33 /* ShapePicker.swift */; };
-		4C93D3B32DF9D80C00780E33 /* ShapeGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93D3B22DF9D80C00780E33 /* ShapeGallery.swift */; };
-		4C93D3B52DF9D8D700780E33 /* ShapeInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93D3B42DF9D8D700780E33 /* ShapeInput.swift */; };
+		4CC835D32E059E0B0045D71A /* NumericKeypad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC835D22E059E0B0045D71A /* NumericKeypad.swift */; };
+		4CC835D52E0817160045D71A /* MixMateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC835D42E0817160045D71A /* MixMateModel.swift */; };
+		4CC835D72E09AEB00045D71A /* DataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC835D62E09AEB00045D71A /* DataEntry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4C1144FA2DC22DED00CCE508 /* MixMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MixMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1144FD2DC22DED00CCE508 /* MixMateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixMateApp.swift; sourceTree = "<group>"; };
+		4C8E1B7F2E05773700D3EDA4 /* KeyPadInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPadInput.swift; sourceTree = "<group>"; };
 		4C93D2DA2DEC71BA00780E33 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		4C93D3182DF085B300780E33 /* GenPDF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenPDF.swift; sourceTree = "<group>"; };
 		4C93D31A2DF1B3FA00780E33 /* DiagramContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramContent.swift; sourceTree = "<group>"; };
 		4C93D31C2DF3016200780E33 /* Diagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diagram.swift; sourceTree = "<group>"; };
-		4C93D3B02DF9D72100780E33 /* ShapePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapePicker.swift; sourceTree = "<group>"; };
-		4C93D3B22DF9D80C00780E33 /* ShapeGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeGallery.swift; sourceTree = "<group>"; };
-		4C93D3B42DF9D8D700780E33 /* ShapeInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeInput.swift; sourceTree = "<group>"; };
+		4CC835D22E059E0B0045D71A /* NumericKeypad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericKeypad.swift; sourceTree = "<group>"; };
+		4CC835D42E0817160045D71A /* MixMateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixMateModel.swift; sourceTree = "<group>"; };
+		4CC835D62E09AEB00045D71A /* DataEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEntry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -48,11 +50,6 @@
 			path = MixMate;
 			sourceTree = "<group>";
 		};
-		4C93D3B62DF9E21A00780E33 /* BackupViews */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = BackupViews;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,14 +66,14 @@
 		4C1144F12DC22DED00CCE508 = {
 			isa = PBXGroup;
 			children = (
-				4C93D3B62DF9E21A00780E33 /* BackupViews */,
 				4C1144FD2DC22DED00CCE508 /* MixMateApp.swift */,
+				4CC835D42E0817160045D71A /* MixMateModel.swift */,
 				4C93D2DA2DEC71BA00780E33 /* MainMenu.swift */,
-				4C93D3B02DF9D72100780E33 /* ShapePicker.swift */,
-				4C93D3B22DF9D80C00780E33 /* ShapeGallery.swift */,
-				4C93D3B42DF9D8D700780E33 /* ShapeInput.swift */,
-				4C93D31C2DF3016200780E33 /* Diagram.swift */,
+				4CC835D62E09AEB00045D71A /* DataEntry.swift */,
+				4C8E1B7F2E05773700D3EDA4 /* KeyPadInput.swift */,
+				4CC835D22E059E0B0045D71A /* NumericKeypad.swift */,
 				4C93D31A2DF1B3FA00780E33 /* DiagramContent.swift */,
+				4C93D31C2DF3016200780E33 /* Diagram.swift */,
 				4C93D3182DF085B300780E33 /* GenPDF.swift */,
 				4C1144FC2DC22DED00CCE508 /* MixMate */,
 				4C1144FB2DC22DED00CCE508 /* Products */,
@@ -108,7 +105,6 @@
 			);
 			fileSystemSynchronizedGroups = (
 				4C1144FC2DC22DED00CCE508 /* MixMate */,
-				4C93D3B62DF9E21A00780E33 /* BackupViews */,
 			);
 			name = MixMate;
 			packageProductDependencies = (
@@ -166,14 +162,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C93D3B12DF9D72100780E33 /* ShapePicker.swift in Sources */,
-				4C93D3B32DF9D80C00780E33 /* ShapeGallery.swift in Sources */,
 				4C1144FE2DC22DED00CCE508 /* MixMateApp.swift in Sources */,
 				4C93D3192DF085B300780E33 /* GenPDF.swift in Sources */,
+				4CC835D52E0817160045D71A /* MixMateModel.swift in Sources */,
+				4CC835D72E09AEB00045D71A /* DataEntry.swift in Sources */,
+				4C8E1B802E05773700D3EDA4 /* KeyPadInput.swift in Sources */,
 				4C93D2E12DEC71BA00780E33 /* MainMenu.swift in Sources */,
 				4C93D31D2DF3016200780E33 /* Diagram.swift in Sources */,
-				4C93D3B52DF9D8D700780E33 /* ShapeInput.swift in Sources */,
 				4C93D31B2DF1B3FA00780E33 /* DiagramContent.swift in Sources */,
+				4CC835D32E059E0B0045D71A /* NumericKeypad.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

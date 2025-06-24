@@ -14,7 +14,7 @@ struct GenPDF: View {
     @State private var pdfURL: URL? = nil
     @State private var hasShared = false
     @State private var pdfWrapper: IdentifiableURL? = nil
-    var shapeSmall: String
+    var pickShape: String
 
     var body: some View {
         Color.clear // invisible view
@@ -62,7 +62,7 @@ struct GenPDF: View {
     BagsSandLarge: Double,
     BagsAggregateLarge: Double) -> URL {
          ///  1; Select UI View to render as pdf
-        let renderer = ImageRenderer(content: DiagramContent(IM:IM, shapeSmall: shapeSmall))
+        let renderer = ImageRenderer(content: DiagramContent(IM:IM, pickShape: pickShape))
                  
          /// 2: Save it to our documents directory
               let url = URL.documentsDirectory.appending(path: "MixMate.pdf")
@@ -124,5 +124,5 @@ struct GenPDF: View {
 
 
  #Preview {
-     GenPDF(shapeSmall: "")
+     GenPDF(pickShape: "")
  }
