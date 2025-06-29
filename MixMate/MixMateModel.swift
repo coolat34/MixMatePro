@@ -9,8 +9,8 @@ import Foundation
 import Combine
 
 public class InputModel: ObservableObject {
-    @Published public var LenAAct: Double = 0.0
-    @Published public var LenBAct: Double = 0.0
+    @Published public var LenAACT: Double = 0.0
+    @Published public var LenBACT: Double = 0.0
     @Published public var WidthACT: Double = 0.0
     @Published public var HeightACT: Double = 0.0
     @Published public var DiameterACT: Double = 0.0
@@ -18,6 +18,14 @@ public class InputModel: ObservableObject {
     @Published public var DiameterLargeACT: Double = 0.0
     @Published public var Area: Double = 0.0
     @Published public var Volume: Double = 0.0
+    
+    @Published public var lenASTR: String = ""
+    @Published public var widthSTR: String = ""
+    @Published public var heightSTR: String = ""
+    @Published public var lenBSTR: String = ""
+    @Published public var diameterSTR: String = ""
+    @Published public var diameterLargeSTR: String = ""
+    @Published public var diameterSmallSTR: String = ""
 
     @Published public var BagsCementSmall: Double = 0.0
     @Published public var BagsCementMed: Double = 0.0
@@ -62,9 +70,9 @@ public class InputModel: ObservableObject {
         }
 
         let valResult = DataHandler.shapeFigs(
-            A: LenAAct, B: WidthACT, C: HeightACT,
+            A: LenAACT, B: WidthACT, C: HeightACT,
             D: DiameterACT, E: DiameterSmallACT,
-            F: note, G: shapeAbr, I: DiameterLargeACT, J: LenBAct, K: ratioSelected
+            F: note, G: shapeAbr, I: DiameterLargeACT, J: LenBACT, K: ratioSelected
         )
 
         Area = valResult.Area
@@ -105,7 +113,7 @@ public class InputModel: ObservableObject {
         errorMessage = ""
         
         // Basic checks for all shapes
-        let allValues = [LenAAct, LenBAct, WidthACT, HeightACT, DiameterACT, DiameterSmallACT, DiameterLargeACT]
+        let allValues = [LenAACT, LenBACT, WidthACT, HeightACT, DiameterACT, DiameterSmallACT, DiameterLargeACT]
         if allValues.contains(where: { $0 < 0 }) {
             showError = true
             errorMessage = "Dimensions must be positive"
@@ -122,8 +130,8 @@ public class InputModel: ObservableObject {
         }
         
         // Checks for Segment (triangle)
-        if shapeAbr == "S" && LenAAct > 0 && WidthACT > 0 && LenBAct > 0 {
-            if !isValidTriangle(LenAAct, WidthACT, LenBAct) {
+        if shapeAbr == "S" && LenAACT > 0 && WidthACT > 0 && LenBACT > 0 {
+            if !isValidTriangle(LenAACT, WidthACT, LenBACT) {
                 showError = true
                 errorMessage = "Sides do not form a valid triangle."
                 return false
@@ -137,4 +145,14 @@ public class InputModel: ObservableObject {
         reCalcBags()
         return true }
 
+    func syncNumericsFromStrings() {
+        HeightACT = Double(heightSTR) ?? 0.0
+        WidthACT = Double(widthSTR) ?? 0.0
+        LenAACT = Double(lenASTR) ?? 0.0
+        LenBACT = Double(lenBSTR) ?? 0.0
+        DiameterACT = Double(diameterSTR) ?? 0.0
+        DiameterSmallACT = Double(diameterSmallSTR) ?? 0.0
+        DiameterLargeACT = Double(diameterLargeSTR) ?? 0.0
+        return
+    }
     } // Class

@@ -32,7 +32,7 @@ struct KeyPadInput: UIViewRepresentable {
         textField.tag = 99
         textField.font = UIFont.preferredFont(forTextStyle: .title2)
         textField.inputView = UIView() // disable system keyboard
-        textField.textAlignment = .left
+        textField.textAlignment = .center
         textField.backgroundColor = UIColor.systemBackground
         textField.layer.cornerRadius = 6
         textField.layer.borderWidth = isStyled ? 3 : 1

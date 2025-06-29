@@ -8,7 +8,7 @@
  MixMate.swift
  ├── MixMateApp        ← App entry point
  ├── Views
- │   ├── MainMenu      ← root container with NavigationStack
+ │   ├── AppView      ← root container with NavigationStack
  │   ├── ShapeOptions  ← Choose a Shape
  │   ├── ShapesDisplay ← Display all available Shapes
  │   ├── DataEntry     ← Setup calls to make dependent on Shape
@@ -32,8 +32,7 @@ struct MixMateApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainMenu(IM: InputModel())
-//                AppView()
+                AppView()
         }
     }
 }

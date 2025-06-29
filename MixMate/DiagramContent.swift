@@ -24,23 +24,23 @@ var pickShape: String
                 .frame(width: 250, height: 150)
                 .padding()
             
-            Text("Rounded to the nearest 1/2 Bag").font(.title2)
+            Text("Rounded to nearest 1/2 Bag").font(.title2)
             
         } // VStack
         
-        Spacer()
+ //       Spacer()
 
         // MARK: Bags Description
         
         HStack(spacing: 5) {
             
-            Text("Bags").frame(minWidth: 80)
-            Text("Cement").frame(minWidth: 80)
-            Text("Sand").frame(minWidth: 80)
-            Text("Aggregate").frame(minWidth: 80)
+            Text("Bags").frame(minWidth: 70)
+            Text("Cement").frame(minWidth: 70)
+            Text("Sand").frame(minWidth: 70)
+            Text("Aggregate").frame(minWidth: 70)
         }/// HStack
         .font(.title3)
-        .frame(height: 50)
+        .frame(height: 40)
         .foregroundColor(.black)
         .background( Color(red: 0.85, green: 0.95, blue: 0.99))
      
@@ -48,10 +48,8 @@ var pickShape: String
         OutputBagField(label: IM.weightSmall, valCem: IM.BagsCementSmall, valSand: IM.BagsSandSmall, valAgg: IM.BagsAggregateSmall)
         OutputBagField(label: IM.weightMed, valCem: IM.BagsCementMed, valSand: IM.BagsSandMed, valAgg: IM.BagsAggregateMed)
         OutputBagField(label: IM.weightLarge, valCem: IM.BagsCementLarge, valSand: IM.BagsSandLarge, valAgg: IM.BagsAggregateLarge)
-        Text("Mix Strength").font(.title2)
-      //  .padding()
+        Text("Mix Strength").font(.title3)
         .navigationBarBackButtonHidden(true)
-        .navigationTitle("Bag Configuration")
         .navigationBarTitleDisplayMode(.inline)
         
     } // Body
@@ -66,20 +64,20 @@ struct OutputBagField: View {
         VStack {
             HStack {
                 Text(label)
-                    .frame(minWidth: 80, alignment: .center)
+                    .frame(minWidth: 70, alignment: .center)
                 Text("\(String(format: "%.1f", valCem))")
-                    .frame(minWidth: 80, alignment: .center)
+                    .frame(minWidth: 70, alignment: .center)
                 Text("\(String(format: "%.1f", valSand))")
-                    .frame(minWidth: 80, alignment: .center)
+                    .frame(minWidth: 70, alignment: .center)
                 Text("\(String(format: "%.1f", valAgg))")
-                    .frame(minWidth: 80, alignment: .leading)
+                    .frame(minWidth: 70, alignment: .leading)
                 
             } // HStack
             .font(.title3)
             .foregroundColor(.black)
             .background( Color(red: 0.85, green: 0.95, blue: 0.99))
             //  .padding(10)
-            .frame(height: 50)
+            .frame(height: 40)
         } // VStack
     } // Body
 } // Struct

@@ -13,11 +13,13 @@ struct NumericKeypad: View {
     var onTAB: () -> Void
 
     @Binding var path: [NavTarget]
+ //   @Binding  var navPath: [NavTarget]
+    
     private let buttons = [
         ["1", "2", "3", "TAB"],
         ["4", "5", "6", "Clear"],
-        ["7", "8", "9", "Next Screen"],
-        [".", "0", "⌫", "Last Screen"]
+        ["7", "8", "9", "Next"],
+        [".", "0", "⌫", "Last"]
     ]
 
     var body: some View {
@@ -29,7 +31,7 @@ struct NumericKeypad: View {
                             Text(symbol)
                                 .font(.title2)
                                 .foregroundStyle(.black)
-                                .frame(width: 70, height: 70)
+                                .frame(width: 65, height: 35)
                                 .background(Color.blue.opacity(0.1))
                                 .border(Color.black, width: 1)
                                 .cornerRadius(12)
@@ -50,10 +52,11 @@ struct NumericKeypad: View {
             input = ""
         case "TAB":
             onTAB()
-        case "Next Screen":
+        case "Next":
             path.append(.next)
-        case "Last Screen":
-            path.append(.last)
+        case "Last":
+          path.append(.last)   // alternative method of voiding the stack
+           path = []
         default:
             input.append(symbol)
         }

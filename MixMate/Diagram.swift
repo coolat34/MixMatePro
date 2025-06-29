@@ -13,7 +13,8 @@ struct Diagram: View {
     @ObservedObject var IM: InputModel
     @Environment(\.dismiss) var dismiss
     @State private var showGenPDF = false
-    @State private var showDataEntry = false
+    @Binding var navPath: [NavTarget]
+    
 var pickShape: String
     var body: some View {
         VStack {
@@ -40,28 +41,27 @@ var pickShape: String
                 Button(action: {
                     showGenPDF = true
                 }) {
-                    CustomButton(label: " Generate a PDF", width: 180, altColour: true, logo: Image(systemName: "rectangle.and.pencil.and.ellipsis"))
+                    CustomButton(label: " Make a PDF", width: 150, altColour: true, logo: Image(systemName: "rectangle.and.pencil.and.ellipsis"))
                 }
                 .sheet(isPresented: $showGenPDF) {
                     GenPDF(pickShape: pickShape).environmentObject(IM)
                 }
-//MARK: button to return to DataEntry
- /*               Button(action: {
-                    showDataEntry = true
+
+                // ✅ Return to DataEntry via navPath
+                Button(action: {
+                   navPath.append(.shapeEntry(pickShape))
                 }) {
-                    CustomButton(label: "Return", width: 180, altColour: true, logo: Image(systemName: "arrow.uturn.backward"))
+                    CustomButton(label: "Return", width: 80, altColour: true, logo: Image(systemName: "arrow.uturn.backward"))
                 }
-                .sheet(isPresented: $showDataEntry) {
-                    DataEntry(pickShape: pickShape, shapeAbr: IM.shapeAbr, IM: IM).environmentObject(IM)
+
+                // ✅ Show Info page via navPath
+                Button(action: {
+                    navPath.append(.info(pickShape))
+                }) {
+                    CustomButton(label: "Info", width: 80, altColour: true, logo: Image(systemName: "questionmark.bubble"))
                 }
-*/
-                Button(action: { dismiss() }) {
-                    CustomButton(label: "Return", width: 100, logo: Image(systemName:"arrow.uturn.backward"))
-                }  
+            }
             }
         }
     }
-}
-#Preview {
-    Diagram(IM: InputModel(), pickShape: "")
-    }
+
